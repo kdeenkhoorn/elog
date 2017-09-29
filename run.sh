@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --name elog --restart always -d -p 8080:8080 -v /data/docker/elog:/var/lib/elog kdedesign/elog:1.0.1
+docker run --name elog --restart always -d -p 8080:8080 -v /data/docker/elog:/var/lib/elog kdedesign/elog
