@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t kdedesign/elog .
+docker build -t cubian.phantasyworld.intern:5000/kdedesign/elog .
