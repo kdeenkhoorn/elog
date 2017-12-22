@@ -10,6 +10,7 @@ RUN groupadd -g 2001 elog \
 
 # imagemagick and elog and mailutils
 RUN apt-get update \
+    && apt-get dist-upgrade -y \
     && apt-get --yes install \
         openssl \
         imagemagick \
