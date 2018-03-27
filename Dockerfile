@@ -1,5 +1,4 @@
-FROM cubian.phantasyworld.intern:5000/kdedesign/debian-stretch
-MAINTAINER "k.eenkhoorn@gmail.com"
+FROM kdedesign/debian-stretch
 
 # Upgrade base OS image
 ENV DEBIAN_FRONTEND noninteractive
@@ -21,6 +20,8 @@ RUN groupadd -g 2001 elog \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+VOLUME ["/var/lib/elog"]
 EXPOSE 8080
 USER elog
-CMD ["/usr/sbin/elogd", "-p", "8080", "-c", "/var/lib/elog/elogd.cfg"]
+ENTRYPOINT ["/usr/sbin/elogd"]
+CMD ["-p", "8080", "-c", "/var/lib/elog/elogd.cfg"]
