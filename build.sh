@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker build -t kdedesign/elog:1.0 .
+docker build -t kdedesign/elog .
