@@ -12,6 +12,7 @@ This docker image is an armhf version of ELOG based on my own debian 9 linux ima
 
 ## More info:
 - Check: https://github.com/kdeenkhoorn/elog
+- Check: https://hub.docker.com/r/kdedesign/elog/
 
 Have fun!
 
