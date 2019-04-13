@@ -8,7 +8,7 @@ This docker image is an armhf version of ELOG based on my own debian 9 linux ima
 - Group: elog (gid: 2001)
 
 ## Build characteristics: 
-- Based on armhf debian 9 (kdedesign/debian-stretch:1.0)
+- Based on armhf debian 9 (kdedesign/debian-stretch:2.0)
 
 ## More info:
 - Check: https://github.com/kdeenkhoorn/elog
