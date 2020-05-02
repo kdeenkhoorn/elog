@@ -9,13 +9,10 @@ pipeline {
     }
 
     stages {
-        stage ('Build docker elog image') {
+        stage ('Build elog docker image') {
             steps {
-                /* git clone repository */
-                git credentialsId: 'gogs_user_klaas', url: 'https://gogs.int.kdedesign.nl/kdedesign/elog.git'
-
-                /* Build base image */
-                sh "./build.sh"
+                /* Build elog image */
+                sh "docker build -f ./Dockerfile -t kdedesign/elog:latest ."
             }
         }
     }
