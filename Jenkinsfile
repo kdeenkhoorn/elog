@@ -15,7 +15,7 @@ pipeline {
                 sh "docker build -f ./Dockerfile -t kdedesign/elog:latest ."
 
                 /* Docker push buildresult */
-                withDockerRegistry(credentialsId: 'dockerhubaccount', url: 'https://registry.hub.docker.com/') {
+                withDockerRegistry(credentialsId: 'dockerhubaccount', url: '') {
                     sh "docker push kdedesign/elog:latest"
                 }
             }
