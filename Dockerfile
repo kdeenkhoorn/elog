@@ -1,4 +1,4 @@
-FROM kdedesign/debian-stretch:2.0
+FROM kdedesign/debian-stretch:latest
 
 # Upgrade base OS image
 ENV DEBIAN_FRONTEND noninteractive
