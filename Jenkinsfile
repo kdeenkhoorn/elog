@@ -15,7 +15,6 @@ pipeline {
 	            [defaultValue: '', key: 'ACTOR', regexpFilter: '', value: '$.pusher.username'],
 	            [defaultValue: '', key: 'REF', regexpFilter: '', value: '$.ref'],
            ],
-           printPostContent: true,
            regexpFilterExpression: '',
            regexpFilterText: '',
            token: '1612d51ccb91ad61b7345e56f4f5a8b4dae70b06' )
