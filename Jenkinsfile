@@ -1,7 +1,7 @@
 pipeline {
 
     agent {
-        label 'armhf'
+        label 'armhf' 
     }
 
     options {
