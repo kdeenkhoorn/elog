@@ -8,6 +8,10 @@ pipeline {
         buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')
     }
 
+    triggers {
+       GenericTrigger causeString: 'Generic Cause', printPostContent: true, regexpFilterExpression: '', regexpFilterText: '', token: '1612d51ccb91ad61b7345e56f4f5a8b4dae70b06'
+    }
+
     stages {
         stage ('Build elog docker image') {
             steps {
