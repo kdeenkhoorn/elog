@@ -9,7 +9,17 @@ pipeline {
     }
 
     triggers {
-       GenericTrigger causeString: 'Generic Cause', printPostContent: true, regexpFilterExpression: '', regexpFilterText: '', token: '1612d51ccb91ad61b7345e56f4f5a8b4dae70b06'
+       GenericTrigger (
+           genericVariables: [
+	            [defaultValue: '', key: 'ACTOR', regexpFilter: '', value: '$.pusher.username'],
+	            [defaultValue: '', key: 'REF', regexpFilter: '', value: '$.ref'],
+           ],
+           causeString: 'Push by: $ACTOR on Ref: $REF',
+           printPostContent: true,
+           regexpFilterExpression: '',
+           regexpFilterText: '',
+           token: '1612d51ccb91ad61b7345e56f4f5a8b4dae70b06'
+       )
     }
 
     stages {
