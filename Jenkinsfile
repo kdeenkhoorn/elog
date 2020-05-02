@@ -13,6 +13,11 @@ pipeline {
             steps {
                 /* Build elog image */
                 sh "docker build -f ./Dockerfile -t kdedesign/elog:latest ."
+
+                /* Docker push buildresult */
+                withDockerRegistry(credentialsId: 'dockerhubaccount') {
+                    docker push kdedesign/elog:latest
+                }
             }
         }
     }
