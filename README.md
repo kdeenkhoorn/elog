@@ -1,5 +1,5 @@
 # ELOG
-This docker image is an armhf version of ELOG based on my own debian 9 linux image.
+This docker image is an armhf version of ELOG based on my own debian stable linux image.
 
 ## Image dependencies:
 - Volume /var/lib/elog for persistent storage
@@ -8,7 +8,7 @@ This docker image is an armhf version of ELOG based on my own debian 9 linux ima
 - Group: elog (gid: 2001)
 
 ## Build characteristics: 
-- Based on armhf debian 9 (kdedesign/debian-stretch:latest)
+- Based on armhf debian stable (kdedesign/debian-stable:latest)
 
 ## More info:
 - Check: https://github.com/kdeenkhoorn/elog

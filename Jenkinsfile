@@ -24,7 +24,7 @@ pipeline {
         stage ('Build elog docker image') {
             steps {
                 /* Build elog image */
-                sh "docker build -f ./Dockerfile -t kdedesign/elog:latest ."
+                sh "docker build -f ./Dockerfile -t kdedesign/elog:latest ./build-context"
             }
         }
         stage ('Publish elog docker image to Docker Hub') {
